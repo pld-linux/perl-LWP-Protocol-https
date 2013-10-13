@@ -16,10 +16,10 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/LWP/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	1b422a7d3b5fed1eb4d748fdc9fd79a4
 URL:		http://search.cpan.org/dist/LWP-Protocol-https/
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-IO-Socket-SSL >= 1:1.38
+BuildRequires:	perl-IO-Socket-SSL >= 1:1.54
 BuildRequires:	perl-Mozilla-CA >= 20110101
 BuildRequires:	perl-Net-HTTP >= 6
 BuildRequires:	perl-libwww >= 6.04
