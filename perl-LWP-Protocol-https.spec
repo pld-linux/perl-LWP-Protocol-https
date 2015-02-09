@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
+
 %define		pdir	LWP
 %define		pnam	Protocol-https
 %include	/usr/lib/rpm/macros.perl
@@ -9,7 +9,7 @@ Summary:	LWP::Protocol::https - Provide https support for LWP::UserAgent
 Summary(pl.UTF-8):	LWP::Protocol::https - obsługa https dla LWP::UserAgent
 Name:		perl-LWP-Protocol-https
 Version:	6.06
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -24,6 +24,7 @@ BuildRequires:	perl-Mozilla-CA >= 20110101
 BuildRequires:	perl-Net-HTTP >= 6
 BuildRequires:	perl-libwww >= 6.06
 %endif
+Requires:	perl-Mozilla-CA
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,10 +35,10 @@ handling, so you don't use it directly. Once the module is installed
 LWP is able to access sites using HTTP over SSL/TLS.
 
 %description -l pl.UTF-8
-Moduł LWP::Protocol::https zapewnia obsługę URL-i ze schematu https
-w LWP. Ten moduł jest wtyczką do obsługi protokołu w LWP, więc nie
-używa się go bezpośrednio. Po zainstalowaniu modułu LWP potrafi
-łączyć się z serwisami przy użyciu HTTP po SSL/TLS.
+Moduł LWP::Protocol::https zapewnia obsługę URL-i ze schematu https w
+LWP. Ten moduł jest wtyczką do obsługi protokołu w LWP, więc nie używa
+się go bezpośrednio. Po zainstalowaniu modułu LWP potrafi łączyć się z
+serwisami przy użyciu HTTP po SSL/TLS.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
