@@ -22,6 +22,8 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-IO-Socket-SSL >= 1:1.54
 BuildRequires:	perl-Mozilla-CA >= 20110101
 BuildRequires:	perl-Net-HTTP >= 6
+BuildRequires:	perl-Test-RequiresInternet
+BuildRequires:	perl-Test-Simple
 BuildRequires:	perl-libwww >= 6.06
 %endif
 Requires:	perl-Mozilla-CA
