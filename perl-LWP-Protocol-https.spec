@@ -4,7 +4,6 @@
 
 %define		pdir	LWP
 %define		pnam	Protocol-https
-%include	/usr/lib/rpm/macros.perl
 Summary:	LWP::Protocol::https - Provide https support for LWP::UserAgent
 Summary(pl.UTF-8):	LWP::Protocol::https - obsługa https dla LWP::UserAgent
 Name:		perl-LWP-Protocol-https
