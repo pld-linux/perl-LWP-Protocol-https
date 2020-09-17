@@ -7,25 +7,25 @@
 Summary:	LWP::Protocol::https - Provide https support for LWP::UserAgent
 Summary(pl.UTF-8):	LWP::Protocol::https - obsługa https dla LWP::UserAgent
 Name:		perl-LWP-Protocol-https
-Version:	6.07
+Version:	6.09
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/LWP/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b8943dfb7d187af63c36fc18ab15947d
+# Source0-md5:	6d497ec74f3cf88ad41898fcb8b01145
 URL:		http://search.cpan.org/dist/LWP-Protocol-https/
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-IO-Socket-SSL >= 1:1.54
-BuildRequires:	perl-Mozilla-CA >= 20110101
+BuildRequires:	perl-Mozilla-CA >= 20180117
 BuildRequires:	perl-Net-HTTP >= 6
 BuildRequires:	perl-Test-RequiresInternet
 BuildRequires:	perl-Test-Simple
 BuildRequires:	perl-libwww >= 6.06
 %endif
-Requires:	perl-Mozilla-CA
+BuildRequires:	perl-Mozilla-CA >= 20180117
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,6 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc CONTRIBUTING.md Changes Install
 %{perl_vendorlib}/LWP/Protocol/https.pm
 %{_mandir}/man3/LWP::Protocol::https.3pm*
