@@ -7,13 +7,13 @@
 Summary:	LWP::Protocol::https - Provide https support for LWP::UserAgent
 Summary(pl.UTF-8):	LWP::Protocol::https - obsługa https dla LWP::UserAgent
 Name:		perl-LWP-Protocol-https
-Version:	6.14
+Version:	6.15
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/LWP/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	65401e3e34be653c9e3b31f798ed5454
+# Source0-md5:	c92eb7bffeb73cf3726193ea69f6792e
 URL:		http://search.cpan.org/dist/LWP-Protocol-https/
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
