@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests		# unit tests
 
 %define		pdir	LWP
 %define		pnam	Protocol-https
@@ -12,9 +12,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/LWP/OALDERS/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/LWP/OALDERS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ec336ad8e2cd3dabf8db3d31f40beb80
-URL:		http://search.cpan.org/dist/LWP-Protocol-https/
+URL:		https://metacpan.org/dist/LWP-Protocol-https
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -23,10 +23,9 @@ BuildRequires:	perl-Mozilla-CA >= 20180117
 BuildRequires:	perl-Net-HTTP >= 6
 BuildRequires:	perl-Test-Needs >= 0.002010
 BuildRequires:	perl-Test-RequiresInternet
-BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-Test-Simple >= 0.96
 BuildRequires:	perl-libwww >= 6.06
 %endif
-BuildRequires:	perl-Mozilla-CA >= 20180117
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
